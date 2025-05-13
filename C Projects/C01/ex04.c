@@ -5,9 +5,3 @@ void  ft_ultimate_div_mod(int *a, int *b){
     *a /= *b; 
     *b = temp % *b; 
 }
-
-int main(void){
-
-
-    return 0;
-}

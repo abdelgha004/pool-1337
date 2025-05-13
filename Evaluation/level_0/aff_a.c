@@ -1,14 +1,14 @@
-/*==== ft_putstr ====*/
-
-
+#include <stdio.h>
 #include <unistd.h>
 
-
-void ft_putstr(char *str){
-
+void aff_a(){
+    
 }
 
+
+
 int main(void){
+
 
 
     return 0;

@@ -1,13 +1,11 @@
 #include <unistd.h>
 #include <stdio.h>
 
-
 void ft_swap(int *a, int *b){
     int temp = *a;
     *a = *b;
     *b = temp;
 }
-
 
 int main(void){
     int x = 5;
