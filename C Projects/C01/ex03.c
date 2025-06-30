@@ -7,9 +7,12 @@ void  ft_div_mod(int a, int b, int *div, int *mod){
 }
 
 int main(void){
-    int x = 12;
-    int y = 6;
-    printf("x = %d  y = %d\n", x, y);
-    ft_div_mod(x, y, &x, &y);
-    printf("x = %d  y = %d\n", x, y);
+    int num1 = 0;
+    int num2 = 0;
+    int *ptr1 = &num1;
+    int *ptr2 = &num2;
+    printf("%d %d\n", *ptr1, *ptr2);
+    ft_div_mod(23, 0, ptr1, ptr2);
+    printf("%d %d\n", *ptr1, *ptr2);
+
 }

@@ -2,15 +2,16 @@
 #include<stdio.h>
 
 void  ft_ultimate_div_mod(int *a, int *b){
-    int temp = *a;
-    *a /= *b; 
-    *b = temp % *b; 
+    int div;
+    div = *a / *b;
+    *b = *a % *b;
+    *a = div;
 }
 
 int main(void){
-    int x = 12;
-    int y = 6;
-    printf("x = %d  y = %d\n", x, y);
-    ft_ultimate_div_mod(&x, &y);
-    printf("x = %d  y = %d\n", x, y);
+    int num1 = 13;
+    int num2 = 2;
+    printf("%d %d\n", num1, num2);
+    ft_ultimate_div_mod(&num1, &num2);
+    printf("%d %d\n", num1, num2);
 }

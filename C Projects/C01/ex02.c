@@ -2,16 +2,19 @@
 #include <stdio.h>
 
 void ft_swap(int *a, int *b){
-    int temp = *a;
+    int temp;
+    temp = *a;
     *a = *b;
     *b = temp;
 }
 
 int main(void){
-    int x = 5;
-    int y = 10;
-    printf("x = %d  and   y = %d\n", x, y);
-    ft_swap(&x, &y);
-    printf("x = %d  and   y = %d\n", x, y);
+    int num1 = 10;
+    int num2 = 10;
+    int *ptr1 = &num1;
+    int *ptr2 = &num2;
+    printf("%d %d\n", *ptr1, *ptr2);
+    ft_swap(ptr1, ptr2);
+    printf("%d %d\n", *ptr1, *ptr2);
     return 0;
 }
