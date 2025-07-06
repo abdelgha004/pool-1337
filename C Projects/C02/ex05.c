@@ -1,12 +1,12 @@
 #include <unistd.h>
 #include <stdio.h>
-int ft_str_is_numeric(char *str){
+int ft_str_is_uppercase(char *str){
     int result;
     result = 1;
     int i;
     i = 0;
     while(str[i] != '\0'){
-        if(str[i] >= '0' && str[i] <= '9'){
+        if(str[i] >= 'A' && str[i] <= 'Z'){
             i++;
         }else {
             result = 0;
@@ -18,6 +18,6 @@ int ft_str_is_numeric(char *str){
 }
 
 int main(void){
-    char test[] = "";
-    ft_str_is_numeric(test);
+    char test[] = "SFDSFRC";
+    ft_str_is_uppercase(test);
 }

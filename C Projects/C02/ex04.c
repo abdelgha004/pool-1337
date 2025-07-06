@@ -1,24 +1,23 @@
 #include <unistd.h>
 #include <stdio.h>
-int ft_str_is_alpha(char *str){
-    int result =  1;
+int ft_str_is_lowercase(char *str){
+    int result;
+    result = 1;
     int i;
     i = 0;
     while(str[i] != '\0'){
         if(str[i] >= 'a' && str[i] <= 'z'){
-            result = 1;
-        }else if(str[i] >= 'A' && str[i] <= 'Z'){
-            result = 1;
+            i++;
         }else {
             result = 0;
             break;
         }
-        i++;
     }
+    printf("%d\n", result);
     return result;
 }
 
 int main(void){
-    char test[] = "anaande lghafour";
-    ft_str_is_alpha(test);
+    char test[] = "bdelgh afour";
+    ft_str_is_lowercase(test);
 }
