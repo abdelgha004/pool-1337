@@ -1,14 +1,20 @@
-#include <stdio.h>
 #include <unistd.h>
-
-void aff_a(char s[]){
-    printf("a\n");
-}
-
-int main(void){
-    char test[50];
-    printf("enter a string: ");
-    scanf(" %s", test);
-    aff_a(test);
-    return 0;
+int main(int argc, char **argv){
+	if(argc != 2){
+		write(1, "a", 1);
+	} else
+	{
+		int i = 0;
+		while(argv[1][i] != '\0')
+		{
+			if(argv[1][i] == 'a')
+			{
+				write(1, "a", 1);
+				break;
+			}	
+			i++;
+		}
+	}
+	write(1, "\n", 1);
+	return 0;
 }
